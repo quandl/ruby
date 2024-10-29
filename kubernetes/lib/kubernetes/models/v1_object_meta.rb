@@ -117,7 +117,7 @@ module Kubernetes
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
       if attributes.has_key?(:'annotations')
-        if (value = attributes[:'annotations']).is_a?(Array)
+        if (value = attributes[:'annotations']).is_a?(Hash)
           self.annotations = value
         end
       end
@@ -157,7 +157,7 @@ module Kubernetes
       end
 
       if attributes.has_key?(:'labels')
-        if (value = attributes[:'labels']).is_a?(Array)
+        if (value = attributes[:'labels']).is_a?(Hash)
           self.labels = value
         end
       end
